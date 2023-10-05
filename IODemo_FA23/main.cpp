@@ -12,8 +12,11 @@ int main()
 	ifstream inFile("data.dat");
 	inFile >> x >> y >> z >> w;
 
-	cout << "The average of file data: " << x << ", " << y << ", " << z << ", and ";
-	cout << w << " is " << func(x, y, z, w) << endl;
+	ofstream house;
+	house.open("out.dat");
+
+	house << "The average of file data: " << x << ", " << y << ", " << z << ", and ";
+	house << w << " is " << func(x, y, z, w) << endl;
 
 	cout << "Input four integers: ";
 	cin >> x >> y >> z >> w;
